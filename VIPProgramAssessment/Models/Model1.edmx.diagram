@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e164460bee6049ed8edad01dacc179ea" Name="Diagram1">
+        <EntityTypeShape EntityType="MooseModel.Cart" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MooseModel.Inventory" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MooseModel.OrderDetail" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MooseModel.Orders" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MooseModel.Product" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MooseModel.ProductColor" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MooseModel.ProductSize" Width="1.5" PointX="0.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MooseModel.Users" Width="1.5" PointX="1.5" PointY="13" IsExpanded="true" />
+        <AssociationConnector Association="MooseModel.FK__Cart__CustomerId__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="MooseModel.FK__Cart__ProductCol__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="MooseModel.FK__Cart__ProductId__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="MooseModel.FK__Cart__ProductSiz__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="MooseModel.FK__Inventory__Produ__1CF15040" ManuallyRouted="false" />
+        <AssociationConnector Association="MooseModel.FK__Inventory__Produ__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="MooseModel.FK__Inventory__Produ__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="MooseModel.FK__OrderDeta__Order__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="MooseModel.FK__OrderDeta__Produ__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="MooseModel.FK__OrderDeta__Produ__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="MooseModel.FK__OrderDeta__Produ__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="MooseModel.FK__Orders__Customer__239E4DCF" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MooseModel.Roles" Width="1.5" PointX="0.75" PointY="13.875" />
+        <AssociationConnector Association="MooseModel.FK__Users__Role__30F848ED" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<VIPProgramAssessment.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="row">
+
+
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            
+            <a href=@("/Home/ProductDetails/" + item.ID)>
+                <img src=@("/" + item.Image) alt="winter jacket" width="200" height="200" />
+            </a>
+            <h4>@item.Name</h4>
+
+        </div>
+
+
+    }
+
+</div>

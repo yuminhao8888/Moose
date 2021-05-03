@@ -48,7 +48,19 @@ namespace VIPProgramAssessment.Controllers
         {
             if (ModelState.IsValid)
             {
-                return Content("good"); 
+                // add product to cart
+                Cart cartItem = new Cart();
+                cartItem.CustomerId = model.CustomerId;
+                cartItem.ProductId = model.ProductId;
+                cartItem.ProductColorId = model.ColorId;
+                cartItem.ProductSizeId = model.SizeId;
+
+                dbc.Cart.Add(cartItem);
+                dbc.SaveChanges();
+
+                
+                return RedirectToAction("Index", "Cart", new { id = model.CustomerId });
+
             }
 
             return Content("good");

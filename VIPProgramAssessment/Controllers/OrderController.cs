@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VIPProgramAssessment.ViewModels;
 
 namespace VIPProgramAssessment.Controllers
 {
@@ -16,8 +17,12 @@ namespace VIPProgramAssessment.Controllers
 
         public ActionResult Checkout(int customerId, decimal? subtotal)
         {
-            int rt = 5;
-            return View();
+            CheckoutViewModel model = new CheckoutViewModel();
+
+            model.CustomerId = customerId;
+            model.Subtotal = subtotal;
+
+            return View(model);
         }
 
         

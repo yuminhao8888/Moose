@@ -1,0 +1,51 @@
+﻿@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Web;
+
+@model IEnumerable<VIPProgramAssessment.ViewModels.CartItem>
+
+@{
+    ViewBag.Title = "Index";
+    //Nullable < decimal > 
+    //string ss;
+    decimal? subTotal = 0;
+}
+
+<h2>Cart</h2>
+
+<div class="row">
+    <div class="col-md-5">
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <div class="col-md-5">
+                    <img src=@("/" + item.ProductImage) alt="winter jacket" width="200" height="200" />
+                </div>
+                <div class="col-md-5">
+
+                    <h4>@item.ProductName</h4>
+                    <h4>$@item.ProductPrice.ToString()</h4>
+                    <h4>Size: @item.Size</h4>
+                    <h4>Color: @item.Color</h4>
+                    
+                </div>
+                
+            </div>
+
+            @(subTotal = subTotal + item.ProductPrice)
+
+
+         }
+    </div>
+    <div class="col-md-5">
+        <h4>Summary</h4>
+        <p>Subtotal $@subTotal</p>
+        @Html.ActionLink("Proceed To Checkout", "Checkout", "Order", new { customerId = (int)@ViewBag.CustomerId, subtotal = @subTotal }, new { @class = "btn btn-primary" })
+        
+    </div>
+</div>
+
+
+
+

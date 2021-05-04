@@ -54,6 +54,7 @@ namespace VIPProgramAssessment.Controllers
                 cartItem.ProductId = model.ProductId;
                 cartItem.ProductColorId = model.ColorId;
                 cartItem.ProductSizeId = model.SizeId;
+                cartItem.Quanatity = 1;
 
                 dbc.Cart.Add(cartItem);
                 dbc.SaveChanges();
